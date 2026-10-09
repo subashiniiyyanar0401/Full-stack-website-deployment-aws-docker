@@ -82,8 +82,6 @@ The application was deployed using three primary containers.
 6. Docker networking enables communication between containers.
 7. Docker volumes preserve database data and uploaded files beyond the lifetime of individual containers.
 
-**Note:** The frontend and backend ports shown above are container application ports. Actual public exposure depends on the Docker port mappings and EC2 security group configuration.
-
 ## 5. AWS EC2 Infrastructure Setup
 
 The application was deployed on an AWS EC2 instance running Amazon Linux 2023.
@@ -135,8 +133,6 @@ Check Docker Compose:
 ```bash
 docker-compose --version
 ```
-
-These commands illustrate the infrastructure verification workflow. Commands should be adjusted to the server's actual configuration.
 
 ## 6. Docker Network Configuration
 
@@ -485,12 +481,6 @@ View database logs:
 docker logs website-postgres
 ```
 
-Inspect the Docker network:
-
-```bash
-docker network inspect website-network
-```
-
 Check the backend API:
 
 ```bash
@@ -503,56 +493,20 @@ Check the frontend:
 curl -I http://localhost:3008
 ```
 
-**Note:** These commands assume that the containers use the generic names shown in this README. Adjust them to match the actual running resources.
-
 ## 15. Screenshots and Evidence
 
-Create a `screenshots/` directory and add sanitized screenshots captured during the project.
+The PDF below contains screenshots documenting the project deployment, configuration, and testing.
 
-Recommended directory structure:
+📄 **[View Project Screenshots (PDF)](Screenshots.pdf)**
 
-```text
-full-stack-website-deployment-aws-docker/
-├── README.md
-├── screenshots/
-│   ├── ec2-docker-status.png
-│   ├── containers-running.png
-│   ├── website-homepage.png
-│   ├── backend-api.png
-│   ├── admin-login.png
-│   ├── admin-dashboard.png
-│   └── upload-test.png
-└── docs/
-    └── deployment-workflow.md
-```
-
-### Display Screenshots in the README
-
-Docker containers:
-
-```markdown
-![Docker containers running](screenshots/containers-running.png)
-```
-
-Website homepage:
-
-```markdown
-![Website homepage](screenshots/website-homepage.png)
-```
-
-Backend API:
-
-```markdown
-![Backend API verification](screenshots/backend-api.png)
-```
-
-Administrator dashboard:
-
-```markdown
-![Administrator dashboard](screenshots/admin-dashboard.png)
-```
-
-Only add images that actually exist in the repository. Ensure screenshots do not expose passwords, tokens, private IP information when unnecessary, database connection strings, or confidential client details.
+The screenshots include:
+- AWS EC2 instance and deployment environment
+- Docker containers and network configuration
+- PostgreSQL database readiness
+- Frontend website and backend API responses
+- Admin login and dashboard
+- CRUD operations and image uploads
+- Troubleshooting and verification
 
 ## 16. Key Learnings
 
