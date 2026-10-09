@@ -189,7 +189,7 @@ The database name remains an internal configuration value and is not a client na
 
 ```bash
 docker exec website-postgres \
-  pg_isready -U postgres -d redangle
+  pg_isready -U postgres -d database name 
 ```
 
 **Expected result:** PostgreSQL reports that it is accepting connections.
