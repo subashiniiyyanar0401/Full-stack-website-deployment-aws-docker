@@ -639,7 +639,7 @@ Backend API Processing
 PostgreSQL Database (Port 5432)
 ```
 
-### Workflow Explanation
+### 18. Workflow Explanation
 
 1. **Source Code:** Frontend and backend source code was obtained from the project repositories.
 2. **Environment Configuration:** Frontend and backend environment variables were configured for application connectivity.
@@ -656,7 +656,7 @@ PostgreSQL Database (Port 5432)
 
 These are proposed enhancements, not features claimed as already implemented.
 
-## 18. Conclusion
+## 19. Conclusion
 
 This internship project strengthened my practical understanding of deploying a full-stack web application on AWS EC2 using Docker.
 
@@ -664,10 +664,8 @@ It provided hands-on exposure to containerization, Linux administration, databas
 
 The project demonstrates my developing skills in AWS cloud operations and DevOps practices, particularly application deployment, container networking, service verification, and technical documentation.
 
-## 19. Confidentiality Notice
+## 20. Confidentiality Notice
 
 This repository contains sanitized technical documentation for professional portfolio and learning purposes.
 
 It excludes client-identifying information and should not contain confidential source code, credentials, access tokens, private configuration values, or other restricted materials.
-
-Only publish project details and evidence that you are authorized to share.
