@@ -570,20 +570,89 @@ This project provided hands-on experience with:
 - Troubleshooting using Linux commands, Docker logs, and `curl`.
 - Application testing and deployment documentation.
 
-## 17. Future Improvements
+## 17. Deployment Flow
 
-Potential improvements for a more production-ready deployment include:
+The deployment workflow followed for this full-stack website project is illustrated below.
 
-- Configure HTTPS using a domain and TLS certificate.
-- Use a reverse proxy for routing and security controls.
-- Store secrets securely rather than in source code.
-- Restrict public access to internal service ports.
-- Add automated deployment through a CI/CD pipeline.
-- Configure application health checks and monitoring.
-- Implement automated database backups.
-- Consider Amazon RDS for managed PostgreSQL.
-- Store uploaded media in Amazon S3 when appropriate.
-- Configure centralized logs and alerts.
+```text
+Source Code
+     |
+     v
+Frontend Environment Configuration
+     |
+     v
+Backend Environment Configuration
+     |
+     v
+PostgreSQL Docker Container
+     |
+     v
+Database Initialization
+     |
+     v
+Backend Docker Image
+     |
+     v
+Backend Docker Container
+     |
+     v
+Backend API (Port 5008)
+     |
+     v
+Frontend Dependency Installation
+     |
+     v
+Production Build (npm run build)
+     |
+     v
+Frontend Docker Image
+     |
+     v
+Frontend Docker Container
+     |
+     v
+Frontend (Port 3008)
+     |
+     v
+Browser Access
+     |
+     v
+Website Display
+     |
+     v
+Admin Login
+     |
+     v
+JWT Authentication
+     |
+     v
+Content Management
+(Add / Edit / Delete)
+     |
+     v
+File and Image Uploads
+     |
+     v
+Backend API Processing
+     |
+     v
+PostgreSQL Database (Port 5432)
+```
+
+### Workflow Explanation
+
+1. **Source Code:** Frontend and backend source code was obtained from the project repositories.
+2. **Environment Configuration:** Frontend and backend environment variables were configured for application connectivity.
+3. **Database Deployment:** PostgreSQL was started in a Docker container, and the database schema was initialized.
+4. **Backend Deployment:** The backend Docker image was built and the container was started to serve API requests on port `5008`.
+5. **Frontend Deployment:** Dependencies were installed, the production build was generated, and the frontend Docker image was built and started on port `3008`.
+6. **Website Verification:** The deployed website was opened in a browser to verify frontend availability.
+7. **Admin Authentication:** Administrator login and JWT-based authentication were tested.
+8. **Content Management:** Add, edit, and delete operations were tested through the admin interface.
+9. **File Uploads:** File and image upload functionality was tested through the application.
+10. **Database Integration:** Backend requests interacted with PostgreSQL on port `5432` through the configured Docker network.
+
+**Result:** The workflow documents the deployment and testing process for the frontend, backend, database, and administrative functionality.
 
 These are proposed enhancements, not features claimed as already implemented.
 
